@@ -28,3 +28,5 @@
 - [x] Maven
 - [x] Intellij
 - Postman
+
+- <https://stackoverflow.com/questions/47240546/should-the-mvnw-files-be-added-to-the-repository>
