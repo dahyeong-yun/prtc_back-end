@@ -1,6 +1,8 @@
 # prtc_back-end
 :black_joker: 스프링 부트 놀이터
 
+- 모집 페이지 : <https://programmers.co.kr/learn/courses/11186>
+
 ## Tech Stack
 
 - jdbc
