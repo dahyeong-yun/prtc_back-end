@@ -35,4 +35,11 @@ public class MemberDao {
             }
         });
     }
+
+    public Test findById(int id) {
+        return jdbcTemplate.queryForObject("SELECT t.id, t.name FROM TEST t WHERE id = ?",
+                (rs, rowNum) -> new Test(rs.getInt("id"), rs.getString("name")),
+                id);
+    }
+
 }

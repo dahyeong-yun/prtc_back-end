@@ -30,7 +30,7 @@ class MemberDaoTest {
     }
 
     @Test
-    @DisplayName("조회 쿼리 테스트")
+    @DisplayName("리스트 조회 테스트")
     void findAll() {
         List<org.playground.app.common.domains.member.entity.Test> result = memberDao.findAll();
 
@@ -38,9 +38,14 @@ class MemberDaoTest {
             System.out.print(i + "번째 아이디= " + result.get(i).getId());
             System.out.println(" / " + i + "번째 이름= " + result.get(i).getName());
         }
-
         assertThat(result.size()).isEqualTo(3);
+    }
 
-        
+    @Test
+    @DisplayName("단일 조회 테스트")
+    void findById() {
+        int findId = 1;
+        org.playground.app.common.domains.member.entity.Test result =  memberDao.findById(findId);
+        assertThat(result.getId()).isEqualTo(findId);
     }
 }
